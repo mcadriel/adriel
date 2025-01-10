@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Jane - A super concise theme for Hugo</title>
-    <link>//localhost:1313/tags/</link>
+    <link>https://mcadriel.github.io/adriel/tags/</link>
     <description>Recent content in Tags on Jane - A super concise theme for Hugo</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>artiza.adriel@gmail.com (Adriel)</managingEditor>
     <webMaster>artiza.adriel@gmail.com (Adriel)</webMaster>
     <lastBuildDate>Fri, 20 Sep 2024 16:01:23 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mcadriel.github.io/adriel/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Preview</title>
-      <link>//localhost:1313/tags/preview/</link>
+      <link>https://mcadriel.github.io/adriel/tags/preview/</link>
       <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>//localhost:1313/tags/preview/</guid>
+      <guid>https://mcadriel.github.io/adriel/tags/preview/</guid>
       <description></description>
     </item>
     <item>
       <title>Shortcodes</title>
-      <link>//localhost:1313/tags/shortcodes/</link>
+      <link>https://mcadriel.github.io/adriel/tags/shortcodes/</link>
       <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>//localhost:1313/tags/shortcodes/</guid>
+      <guid>https://mcadriel.github.io/adriel/tags/shortcodes/</guid>
       <description></description>
     </item>
     <item>
       <title>Tag-6</title>
-      <link>//localhost:1313/tags/tag-6/</link>
+      <link>https://mcadriel.github.io/adriel/tags/tag-6/</link>
       <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>//localhost:1313/tags/tag-6/</guid>
+      <guid>https://mcadriel.github.io/adriel/tags/tag-6/</guid>
       <description></description>
     </item>
     <item>
       <title>Update</title>
-      <link>//localhost:1313/tags/update/</link>
+      <link>https://mcadriel.github.io/adriel/tags/update/</link>
       <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>//localhost:1313/tags/update/</guid>
+      <guid>https://mcadriel.github.io/adriel/tags/update/</guid>
       <description></description>
     </item>
   </channel>
