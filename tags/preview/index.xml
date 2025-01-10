@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Preview on Jane - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/tags/preview/</link>
+    <link>https://mcadriel.github.io/adriel/tags/preview/</link>
     <description>Recent content in Preview on Jane - A super concise theme for Hugo</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>artiza.adriel@gmail.com (Adriel)</managingEditor>
     <webMaster>artiza.adriel@gmail.com (Adriel)</webMaster>
     <lastBuildDate>Fri, 20 Sep 2024 16:01:23 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/preview/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mcadriel.github.io/adriel/tags/preview/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jane Theme V3 Major Update</title>
-      <link>http://localhost:1313/post/jane-theme-v3-major-update/</link>
+      <link>https://mcadriel.github.io/adriel/post/jane-theme-v3-major-update/</link>
       <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>http://localhost:1313/post/jane-theme-v3-major-update/</guid>
+      <guid>https://mcadriel.github.io/adriel/post/jane-theme-v3-major-update/</guid>
       <description>&lt;h2 id=&#34;update-content&#34;&gt;Update Content&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Use &lt;a href=&#34;https://picocss.com/&#34;&gt;Pico CSS&lt;/a&gt; as the color scheme, allowing theme color switching and dark/light mode toggle.&lt;/li&gt;&#xA;&lt;li&gt;Customize Your Homepage.&lt;/li&gt;&#xA;&lt;li&gt;Added STYLE SETTINGS, located at &lt;code&gt;/assets/sass/_settings.scss&lt;/code&gt; .&lt;/li&gt;&#xA;&lt;li&gt;Deprecated the Category page, merging it into the Archive page.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Please note that due to the extensive modifications, some areas may still need refinement. I appreciate your understanding!&lt;/p&gt;</description>
     </item>
   </channel>
