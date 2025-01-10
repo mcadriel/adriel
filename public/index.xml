@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Custom home page on Jane - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Custom home page on Jane - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>artiza.adriel@gmail.com (Adriel)</managingEditor>
+    <webMaster>artiza.adriel@gmail.com (Adriel)</webMaster>
+    <lastBuildDate>Fri, 10 Jan 2025 11:11:04 +0800</lastBuildDate>
+    
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jane Theme V3 Major Update</title>
+      <link>http://localhost:1313/post/jane-theme-v3-major-update/</link>
+      <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate>
+      <author>artiza.adriel@gmail.com (Adriel)</author>
+      <guid>http://localhost:1313/post/jane-theme-v3-major-update/</guid>
+      
+        <description>&lt;h2 id=&#34;update-content&#34;&gt;Update Content&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;a href=&#34;https://picocss.com/&#34;&gt;Pico CSS&lt;/a&gt; as the color scheme, allowing theme color switching and dark/light mode toggle.&lt;/li&gt;
+&lt;li&gt;Customize Your Homepage.&lt;/li&gt;
+&lt;li&gt;Added STYLE SETTINGS, located at &lt;code&gt;/assets/sass/_settings.scss&lt;/code&gt; .&lt;/li&gt;
+&lt;li&gt;Deprecated the Category page, merging it into the Archive page.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please note that due to the extensive modifications, some areas may still need refinement. I appreciate your understanding!&lt;/p&gt;
+&lt;h2 id=&#34;customize-your-homepage&#34;&gt;Customize Your Homepage&lt;/h2&gt;
+&lt;p&gt;Copy &lt;code&gt;/exampleSite/content/_index.md&lt;/code&gt; to your website&amp;rsquo;s &lt;code&gt;/content/_index.md&lt;/code&gt; and modify the parameters inside.&lt;/p&gt;
+&lt;p&gt;For multilingual sites, please create corresponding &lt;code&gt;_index.language.md&lt;/code&gt; files, such as &lt;code&gt;_index.zh-cn.md&lt;/code&gt; .&lt;/p&gt;
+&lt;h2 id=&#34;personalize-your-website&#34;&gt;Personalize Your Website&lt;/h2&gt;
+&lt;p&gt;Copy &lt;code&gt;/assets/sass/_settings.scss&lt;/code&gt; and &lt;code&gt;/assets/sass/_custom.scss&lt;/code&gt; to your website&amp;rsquo;s root directory (Note: maintain the same path and file names).&lt;/p&gt;
+&lt;p&gt;Modify variables in &lt;code&gt;_settings.scss&lt;/code&gt; and add custom styles in &lt;code&gt;/assets/sass/_custom.scss&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;upgrading-to-v3&#34;&gt;Upgrading to v3&lt;/h2&gt;
+&lt;p&gt;The new version utilizes the latest Sass language features, requiring Dart Sass installation.&lt;/p&gt;
+&lt;p&gt;For installation guidance, refer to the official documentation: &lt;a href=&#34;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass&#34;&gt;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you are using CI/CD automation tools, please remember to install Dart Sass as well: &lt;a href=&#34;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#installing-in-a-production-environment&#34;&gt;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#installing-in-a-production-environment&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Note: You may encounter compatibility issues after upgrading. If you face difficulties, please feel free to open an issue.&lt;/p&gt;
+&lt;h2 id=&#34;development-philosophy-of-this-theme&#34;&gt;Development Philosophy of This Theme&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;No &lt;code&gt;node_modules&lt;/code&gt; - fewer dependencies make maintenance easier.&lt;/li&gt;
+&lt;li&gt;Encourages users to modify the theme according to personal preferences for a more personalized website.&lt;/li&gt;
+&lt;li&gt;Reading Experience is the top priority.&lt;/li&gt;
+&lt;li&gt;Deploy once, focus on writing, no more hassle.&lt;/li&gt;
+&lt;/ol&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      <author>artiza.adriel@gmail.com (Adriel)</author>
+      <guid>http://localhost:1313/about/</guid>
+      
+        <description>&lt;p&gt;Hugo is a static site engine written in Go.&lt;/p&gt;
+&lt;p&gt;It makes use of a variety of open source projects including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;&gt;Cobra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;&gt;Viper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/jWalterWeatherman&#34;&gt;J Walter Weatherman&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Rust Journey</title>
+      <link>http://localhost:1313/post/rust-journey/</link>
+      <pubDate>Fri, 10 Jan 2025 11:11:04 +0800</pubDate>
+      <author>artiza.adriel@gmail.com (Adriel)</author>
+      <guid>http://localhost:1313/post/rust-journey/</guid>
+      
+        <description>&lt;h2 id=&#34;hello-rust&#34;&gt;Hello Rust!&lt;/h2&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

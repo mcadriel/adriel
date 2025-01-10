@@ -1,3 +1,64 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+# This is a simple configuration.
+# If you want to see the full configuration, please check `full-config.toml` .
+# And see https://gohugo.io/getting-started/configuration/ .
+
+baseURL = "http://localhost:1313/"
+title = "Jane - A super concise theme for Hugo"
+enableRobotsTXT = true
+enableEmoji = true
+theme = "jane"
+
+[pagination]
+  pagerSize = 5
+
+# language support # en / zh-cn / other... translations present in i18n/
+defaultContentLanguage = "en"           # Default language to use
+[languages.en]
+  languageCode = "en"
+
+# [sitemap]                 # essential
+#   changefreq = "weekly"
+#   priority = 0.5
+#   filename = "sitemap.xml"
+
+[[menu.main]]             # config your menu
+  name = "Home"
+  weight = 10
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "Archives"
+  weight = 20
+  identifier = "archives"
+  url = "/post/"
+
+
+[params]
+  since = "2025"            # Site creation time
+  homeFullContent = false   # if false, show post summaries on home page. Otherwise show full content.
+  rssFullContent = true     # if false, Rss feed instead of the summary
+
+  author.name = "Adriel"      # essential
+  author.email = "artiza.adriel@gmail.com" # optional, for RSS
+  author.url = "/about"        # optional                      # 可选
+
+  logoTitle = "Adriel"        # default: the title value
+  keywords = ["Hugo", "theme","jane"]
+  description = "Hugo theme jane example site."
+
+  # The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/
+  dateFormatToUse = "2006-01-02"
+
+  toc = true
+  photoswipe = true
+  contentCopyright = '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
+
+  # Link custom CSS and JS assets
+  #   (relative to /static/css and /static/js respectively)
+  customCSS = []            # if ['custom.css'], load '/static/css/custom.css' file
+  customJS = []             # if ['custom.js'], load '/static/js/custom.js' file
+
+  [params.social]
+    a-email = "mailto:your@email.com"
+    e-linkedin = "https://linkedin.com/in/adrielartiza"
+    g-github = "https://github.com/mcadriel"
