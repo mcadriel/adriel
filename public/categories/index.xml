@@ -8,6 +8,14 @@
     <language>en</language>
     <managingEditor>artiza.adriel@gmail.com (Adriel)</managingEditor>
     <webMaster>artiza.adriel@gmail.com (Adriel)</webMaster>
+    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mcadriel.github.io/adriel/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming</title>
+      <link>https://mcadriel.github.io/adriel/categories/programming/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
+      <guid>https://mcadriel.github.io/adriel/categories/programming/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

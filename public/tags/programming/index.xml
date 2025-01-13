@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Jane - A super concise theme for Hugo</title>
-    <link>https://mcadriel.github.io/adriel/post/</link>
-    <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
+    <title>Programming on Jane - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/adriel/tags/programming/</link>
+    <description>Recent content in Programming on Jane - A super concise theme for Hugo</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>artiza.adriel@gmail.com (Adriel)</managingEditor>
     <webMaster>artiza.adriel@gmail.com (Adriel)</webMaster>
-    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mcadriel.github.io/adriel/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/adriel/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mastering Closures in Rust: The Idiomatic Way</title>
-      <link>https://mcadriel.github.io/adriel/post/closures-in-rust/</link>
-      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>https://mcadriel.github.io/adriel/post/closures-in-rust/</guid>
+      <link>http://localhost:1313/adriel/post/closures-in-rust/</link>
+      <pubDate>Mon, 13 Jan 2025 00:00:00 +0000</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
+      <guid>http://localhost:1313/adriel/post/closures-in-rust/</guid>
       <description>&lt;p&gt;Closures are a powerful feature in Rust, providing a concise way to capture and use variables from their surrounding scope. In this post, we’ll explore closures and how to use them in an idiomatic Rust programming style.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-are-closures&#34;&gt;What Are Closures?&lt;/h2&gt;&#xA;&lt;p&gt;A &lt;strong&gt;closure&lt;/strong&gt; is an anonymous function that can capture variables from its enclosing scope. Closures in Rust are flexible and can adapt to different levels of functionality:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fn:&lt;/strong&gt; Borrow variables from the environment immutably.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;FnMut:&lt;/strong&gt; Borrow variables mutably.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;FnOnce:&lt;/strong&gt; Take ownership of the variables they capture.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Here’s a simple example:&lt;/p&gt;</description>
     </item>
   </channel>

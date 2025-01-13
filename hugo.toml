@@ -31,7 +31,16 @@ defaultContentLanguage = "en"           # Default language to use
   weight = 20
   identifier = "archives"
   url = "/post/"
-
+[[menu.main]]             # config your menu
+  name = "Home"
+  weight = 10
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "About"
+  weight = 20
+  identifier = "about"
+  url = "/about/"
 
 [params]
   since = "2025"            # Site creation time
@@ -40,7 +49,7 @@ defaultContentLanguage = "en"           # Default language to use
 
   author.name = "Adriel"      # essential
   author.email = "artiza.adriel@gmail.com" # optional, for RSS
-  author.url = "/about"        # optional                      # 可选
+  author.url = "/about"        # optional
 
   logoTitle = "Adriel"        # default: the title value
   keywords = ["Hugo", "theme","jane"]
