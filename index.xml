@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Custom home page on Jane - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/adriel/</link>
+    <link>https://mcadriel.github.io/adriel/</link>
     <description>Recent content in Custom home page on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -10,15 +10,15 @@
     <webMaster>artiza.adriel@gmail.com (Adriel)</webMaster>
     <lastBuildDate>Fri, 23 Feb 2024 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="http://localhost:1313/adriel/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://mcadriel.github.io/adriel/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Solana Smart Contract Tutorial</title>
-      <link>http://localhost:1313/adriel/post/smartcontract-solana/</link>
+      <link>https://mcadriel.github.io/adriel/post/smartcontract-solana/</link>
       <pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate>
       <author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>http://localhost:1313/adriel/post/smartcontract-solana/</guid>
+      <guid>https://mcadriel.github.io/adriel/post/smartcontract-solana/</guid>
       
         <description>&lt;h2 id=&#34;what-is-solana&#34;&gt;What is Solana?&lt;/h2&gt;
 &lt;p&gt;Solana is a high-performance blockchain supporting fast transactions and low fees. Smart contracts in Solana are written in &lt;strong&gt;Rust&lt;/strong&gt;, &lt;strong&gt;C&lt;/strong&gt;, or &lt;strong&gt;C++&lt;/strong&gt;, and are deployed as &lt;strong&gt;programs&lt;/strong&gt;. Programs interact with &lt;strong&gt;accounts&lt;/strong&gt;, which hold data and &lt;strong&gt;SOL&lt;/strong&gt; tokens.&lt;/p&gt;
@@ -193,10 +193,10 @@
     
     <item>
       <title>About</title>
-      <link>http://localhost:1313/adriel/about/</link>
+      <link>https://mcadriel.github.io/adriel/about/</link>
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       <author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>http://localhost:1313/adriel/about/</guid>
+      <guid>https://mcadriel.github.io/adriel/about/</guid>
       
         <description>&lt;h1 id=&#34;about-this-blog&#34;&gt;About This Blog&lt;/h1&gt;
 &lt;p&gt;Welcome to this space dedicated to exploring &lt;strong&gt;Rust programming&lt;/strong&gt; 🦀 and &lt;strong&gt;blockchain technologies&lt;/strong&gt;. Whether you&amp;rsquo;re a beginner, an experienced developer, or just curious about these topics, this blog offers resources to help you grow and learn.&lt;/p&gt;
@@ -233,10 +233,10 @@ Explorations of blockchain protocols, decentralized finance (DeFi), and the rapi
     
     <item>
       <title>Mastering Closures in Rust: The Idiomatic Way</title>
-      <link>http://localhost:1313/adriel/post/closures-in-rust/</link>
+      <link>https://mcadriel.github.io/adriel/post/closures-in-rust/</link>
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       <author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>http://localhost:1313/adriel/post/closures-in-rust/</guid>
+      <guid>https://mcadriel.github.io/adriel/post/closures-in-rust/</guid>
       
         <description>&lt;p&gt;Closures are a powerful feature in Rust, providing a concise way to capture and use variables from their surrounding scope. In this post, we’ll explore closures and how to use them in an idiomatic Rust programming style.&lt;/p&gt;
 &lt;h2 id=&#34;what-are-closures&#34;&gt;What Are Closures?&lt;/h2&gt;

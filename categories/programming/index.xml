@@ -2,19 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming on Jane - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/adriel/categories/programming/</link>
+    <link>https://mcadriel.github.io/adriel/categories/programming/</link>
     <description>Recent content in Programming on Jane - A super concise theme for Hugo</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>artiza.adriel@gmail.com (Adriel)</managingEditor>
     <webMaster>artiza.adriel@gmail.com (Adriel)</webMaster>
-    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/adriel/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mcadriel.github.io/adriel/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solana Smart Contract Tutorial</title>
+      <link>https://mcadriel.github.io/adriel/post/smartcontract-solana/</link>
+      <pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
+      <guid>https://mcadriel.github.io/adriel/post/smartcontract-solana/</guid>
+      <description>&lt;h2 id=&#34;what-is-solana&#34;&gt;What is Solana?&lt;/h2&gt;&#xA;&lt;p&gt;Solana is a high-performance blockchain supporting fast transactions and low fees. Smart contracts in Solana are written in &lt;strong&gt;Rust&lt;/strong&gt;, &lt;strong&gt;C&lt;/strong&gt;, or &lt;strong&gt;C++&lt;/strong&gt;, and are deployed as &lt;strong&gt;programs&lt;/strong&gt;. Programs interact with &lt;strong&gt;accounts&lt;/strong&gt;, which hold data and &lt;strong&gt;SOL&lt;/strong&gt; tokens.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Familiarity with Rust programming.&lt;/li&gt;&#xA;&lt;li&gt;Basic understanding of blockchain and smart contracts.&lt;/li&gt;&#xA;&lt;li&gt;Installed &lt;a href=&#34;https://docs.solana.com/cli/install-solana-cli&#34;&gt;Solana CLI&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;key-concepts&#34;&gt;Key Concepts&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-accounts&#34;&gt;1. Accounts&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Accounts&lt;/strong&gt; are the data storage units on Solana. Every account:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Has a unique public key.&lt;/li&gt;&#xA;&lt;li&gt;Holds data that programs can read or modify.&lt;/li&gt;&#xA;&lt;li&gt;Is owned by a specific program.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Unlike Ethereum, Solana separates the program logic (smart contracts) from accounts.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-signers-and-payers&#34;&gt;2. Signers and Payers&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Signers&lt;/strong&gt;: The entities that cryptographically sign transactions to prove authorization.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Payers&lt;/strong&gt;: The accounts that pay the transaction fee. Often, the signer is also the payer, but they can be separate.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;setting-up-a-new-solana-account&#34;&gt;Setting Up a New Solana Account&lt;/h2&gt;&#xA;&lt;h3 id=&#34;step-1-create-a-new-keypair&#34;&gt;Step 1: Create a New Keypair&lt;/h3&gt;&#xA;&lt;p&gt;A keypair consists of a &lt;strong&gt;public key&lt;/strong&gt; (your account address) and a &lt;strong&gt;private key&lt;/strong&gt; (used to sign transactions).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Mastering Closures in Rust: The Idiomatic Way</title>
-      <link>http://localhost:1313/adriel/post/closures-in-rust/</link>
+      <link>https://mcadriel.github.io/adriel/post/closures-in-rust/</link>
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>http://localhost:1313/adriel/post/closures-in-rust/</guid>
+      <guid>https://mcadriel.github.io/adriel/post/closures-in-rust/</guid>
       <description>&lt;p&gt;Closures are a powerful feature in Rust, providing a concise way to capture and use variables from their surrounding scope. In this post, we’ll explore closures and how to use them in an idiomatic Rust programming style.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-are-closures&#34;&gt;What Are Closures?&lt;/h2&gt;&#xA;&lt;p&gt;A &lt;strong&gt;closure&lt;/strong&gt; is an anonymous function that can capture variables from its enclosing scope. Closures in Rust are flexible and can adapt to different levels of functionality:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fn:&lt;/strong&gt; Borrow variables from the environment immutably.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;FnMut:&lt;/strong&gt; Borrow variables mutably.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;FnOnce:&lt;/strong&gt; Take ownership of the variables they capture.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Here’s a simple example:&lt;/p&gt;</description>
     </item>
   </channel>
