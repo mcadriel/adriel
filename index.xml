@@ -8,75 +8,120 @@
     <language>en</language>
     <managingEditor>artiza.adriel@gmail.com (Adriel)</managingEditor>
     <webMaster>artiza.adriel@gmail.com (Adriel)</webMaster>
-    <lastBuildDate>Fri, 10 Jan 2025 11:11:04 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mcadriel.github.io/adriel/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Jane Theme V3 Major Update</title>
-      <link>https://mcadriel.github.io/adriel/post/jane-theme-v3-major-update/</link>
-      <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate>
-      <author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>https://mcadriel.github.io/adriel/post/jane-theme-v3-major-update/</guid>
-      
-        <description>&lt;h2 id=&#34;update-content&#34;&gt;Update Content&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Use &lt;a href=&#34;https://picocss.com/&#34;&gt;Pico CSS&lt;/a&gt; as the color scheme, allowing theme color switching and dark/light mode toggle.&lt;/li&gt;
-&lt;li&gt;Customize Your Homepage.&lt;/li&gt;
-&lt;li&gt;Added STYLE SETTINGS, located at &lt;code&gt;/assets/sass/_settings.scss&lt;/code&gt; .&lt;/li&gt;
-&lt;li&gt;Deprecated the Category page, merging it into the Archive page.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Please note that due to the extensive modifications, some areas may still need refinement. I appreciate your understanding!&lt;/p&gt;
-&lt;h2 id=&#34;customize-your-homepage&#34;&gt;Customize Your Homepage&lt;/h2&gt;
-&lt;p&gt;Copy &lt;code&gt;/exampleSite/content/_index.md&lt;/code&gt; to your website&amp;rsquo;s &lt;code&gt;/content/_index.md&lt;/code&gt; and modify the parameters inside.&lt;/p&gt;
-&lt;p&gt;For multilingual sites, please create corresponding &lt;code&gt;_index.language.md&lt;/code&gt; files, such as &lt;code&gt;_index.zh-cn.md&lt;/code&gt; .&lt;/p&gt;
-&lt;h2 id=&#34;personalize-your-website&#34;&gt;Personalize Your Website&lt;/h2&gt;
-&lt;p&gt;Copy &lt;code&gt;/assets/sass/_settings.scss&lt;/code&gt; and &lt;code&gt;/assets/sass/_custom.scss&lt;/code&gt; to your website&amp;rsquo;s root directory (Note: maintain the same path and file names).&lt;/p&gt;
-&lt;p&gt;Modify variables in &lt;code&gt;_settings.scss&lt;/code&gt; and add custom styles in &lt;code&gt;/assets/sass/_custom.scss&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;upgrading-to-v3&#34;&gt;Upgrading to v3&lt;/h2&gt;
-&lt;p&gt;The new version utilizes the latest Sass language features, requiring Dart Sass installation.&lt;/p&gt;
-&lt;p&gt;For installation guidance, refer to the official documentation: &lt;a href=&#34;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass&#34;&gt;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;If you are using CI/CD automation tools, please remember to install Dart Sass as well: &lt;a href=&#34;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#installing-in-a-production-environment&#34;&gt;https://gohugo.io/hugo-pipes/transpile-sass-to-css/#installing-in-a-production-environment&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Note: You may encounter compatibility issues after upgrading. If you face difficulties, please feel free to open an issue.&lt;/p&gt;
-&lt;h2 id=&#34;development-philosophy-of-this-theme&#34;&gt;Development Philosophy of This Theme&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;No &lt;code&gt;node_modules&lt;/code&gt; - fewer dependencies make maintenance easier.&lt;/li&gt;
-&lt;li&gt;Encourages users to modify the theme according to personal preferences for a more personalized website.&lt;/li&gt;
-&lt;li&gt;Reading Experience is the top priority.&lt;/li&gt;
-&lt;li&gt;Deploy once, focus on writing, no more hassle.&lt;/li&gt;
-&lt;/ol&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>About</title>
       <link>https://mcadriel.github.io/adriel/about/</link>
-      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       <author>artiza.adriel@gmail.com (Adriel)</author>
       <guid>https://mcadriel.github.io/adriel/about/</guid>
       
-        <description>&lt;p&gt;Hugo is a static site engine written in Go.&lt;/p&gt;
-&lt;p&gt;It makes use of a variety of open source projects including:&lt;/p&gt;
+        <description>&lt;h1 id=&#34;about-this-blog&#34;&gt;About This Blog&lt;/h1&gt;
+&lt;p&gt;Welcome to this space dedicated to exploring &lt;strong&gt;Rust programming&lt;/strong&gt; 🦀 and &lt;strong&gt;blockchain technologies&lt;/strong&gt;. Whether you&amp;rsquo;re a beginner, an experienced developer, or just curious about these topics, this blog offers resources to help you grow and learn.&lt;/p&gt;
+&lt;h2 id=&#34;what-youll-find-here&#34;&gt;What You’ll Find Here&lt;/h2&gt;
+&lt;p&gt;This blog is designed to provide valuable insights, tutorials, and explorations in these key areas:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;&gt;Cobra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;&gt;Viper&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/jWalterWeatherman&#34;&gt;J Walter Weatherman&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;🚀 Rust Tutorials&lt;/strong&gt;&lt;br&gt;
+Beginner-friendly and intermediate guides to harness the power of Rust, the &amp;ldquo;language of fearless programming.&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;🔗 Blockchain Development&lt;/strong&gt;&lt;br&gt;
+Insights into building decentralized applications (dApps) and smart contracts with platforms like Solana and Go Ethereum (Geth).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;💡 Programming Projects&lt;/strong&gt;&lt;br&gt;
+A behind-the-scenes look at various projects, with code snippets and challenges faced during development.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;⚡ Performance Tips&lt;/strong&gt;&lt;br&gt;
+Techniques and advice to write efficient, clean, and scalable code.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;🌐 Web3 and Decentralization&lt;/strong&gt;&lt;br&gt;
+Explorations of blockchain protocols, decentralized finance (DeFi), and the rapidly evolving Web3 landscape.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;why-this-blog&#34;&gt;Why This Blog?&lt;/h2&gt;
+&lt;p&gt;The goal is to simplify complex topics, share practical knowledge, and inspire others to dive into the worlds of Rust and blockchain. This blog is for anyone passionate about coding, innovation, and the future of technology.&lt;/p&gt;
+&lt;p&gt;Start exploring today and join the journey toward fearless programming and decentralized possibilities! 🚀&lt;/p&gt;
 </description>
       
     </item>
     
     <item>
-      <title>Rust Journey</title>
-      <link>https://mcadriel.github.io/adriel/post/rust-journey/</link>
-      <pubDate>Fri, 10 Jan 2025 11:11:04 +0800</pubDate>
+      <title>Mastering Closures in Rust: The Idiomatic Way</title>
+      <link>https://mcadriel.github.io/adriel/post/closures-in-rust/</link>
+      <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       <author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>https://mcadriel.github.io/adriel/post/rust-journey/</guid>
+      <guid>https://mcadriel.github.io/adriel/post/closures-in-rust/</guid>
       
-        <description>&lt;h2 id=&#34;hello-rust&#34;&gt;Hello Rust!&lt;/h2&gt;</description>
+        <description>&lt;p&gt;Closures are a powerful feature in Rust, providing a concise way to capture and use variables from their surrounding scope. In this post, we’ll explore closures and how to use them in an idiomatic Rust programming style.&lt;/p&gt;
+&lt;h2 id=&#34;what-are-closures&#34;&gt;What Are Closures?&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;closure&lt;/strong&gt; is an anonymous function that can capture variables from its enclosing scope. Closures in Rust are flexible and can adapt to different levels of functionality:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fn:&lt;/strong&gt; Borrow variables from the environment immutably.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FnMut:&lt;/strong&gt; Borrow variables mutably.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;FnOnce:&lt;/strong&gt; Take ownership of the variables they capture.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here’s a simple example:&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; greet &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;name: &lt;span style=&#34;color:#66d9ef&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;str&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;!&amp;#34;&lt;/span&gt;, name);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;greet(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;World&amp;#34;&lt;/span&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Capturing Variables by Reference&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; add_to_x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;n: &lt;span style=&#34;color:#66d9ef&#34;&gt;i32&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; x;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, add_to_x(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;)); &lt;span style=&#34;color:#75715e&#34;&gt;// Outputs: 15
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Capturing Variables Mutably&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; counter &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; increment &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    counter &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Counter: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, counter);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;increment(); &lt;span style=&#34;color:#75715e&#34;&gt;// Outputs: Counter: 1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;increment(); &lt;span style=&#34;color:#75715e&#34;&gt;// Outputs: Counter: 2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Capturing Variables by Value&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; vec![&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Alice&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Bob&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Charlie&amp;#34;&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; consume_names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:?}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, names); &lt;span style=&#34;color:#75715e&#34;&gt;// Takes ownership
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// consume_names can only be called once
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;consume_names();&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</description>
       
     </item>
     
