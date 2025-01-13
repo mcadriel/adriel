@@ -68,6 +68,6 @@ defaultContentLanguage = "en"           # Default language to use
   customJS = []             # if ['custom.js'], load '/static/js/custom.js' file
 
   [params.social]
-    a-email = "mailto:your@email.com"
+    a-email = "mailto:artiza.adriel@gmail.com"
     e-linkedin = "https://linkedin.com/in/adrielartiza"
     g-github = "https://github.com/mcadriel"
