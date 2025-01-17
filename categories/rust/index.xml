@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rust on Jane - A super concise theme for Hugo</title>
-    <link>https://mcadriel.github.io/adriel/categories/rust/</link>
-    <description>Recent content in Rust on Jane - A super concise theme for Hugo</description>
+    <title>Rust on Adriel&#39;s Page</title>
+    <link>http://localhost:1313/adriel/categories/rust/</link>
+    <description>Recent content in Rust on Adriel&#39;s Page</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>artiza.adriel@gmail.com (Adriel)</managingEditor>
     <webMaster>artiza.adriel@gmail.com (Adriel)</webMaster>
     <lastBuildDate>Fri, 17 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mcadriel.github.io/adriel/categories/rust/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/adriel/categories/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Digital Signatures in Rust</title>
-      <link>https://mcadriel.github.io/adriel/post/digital-signatures-rust/</link>
+      <link>http://localhost:1313/adriel/post/digital-signatures-rust/</link>
       <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>https://mcadriel.github.io/adriel/post/digital-signatures-rust/</guid>
+      <guid>http://localhost:1313/adriel/post/digital-signatures-rust/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This tutorial demonstrates how to implement digital signatures in Rust using the &lt;code&gt;ring&lt;/code&gt; crate. Digital signatures are essential for ensuring data integrity and authenticity.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Rust installed on your system. If not, install it from &lt;a href=&#34;https://www.rust-lang.org/&#34;&gt;Rust&amp;rsquo;s official website&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Basic knowledge of Rust programming.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;steps-to-implement-digital-signatures&#34;&gt;Steps to Implement Digital Signatures&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-create-a-new-rust-project&#34;&gt;1. Create a New Rust Project&lt;/h3&gt;&#xA;&lt;p&gt;Run the following command to create a new Rust project:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-container&#34;&gt;&#xA;&#xA;  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;&#xA;&#xA;  &#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cargo new digital_signature_demo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd digital_signature_demo&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h3 id=&#34;2-add-the-ring-crate&#34;&gt;2. Add the &lt;code&gt;ring&lt;/code&gt; Crate&lt;/h3&gt;&#xA;&lt;p&gt;Update the &lt;code&gt;Cargo.toml&lt;/code&gt; file to include the &lt;code&gt;ring&lt;/code&gt; crate:&lt;/p&gt;</description>
     </item>
   </channel>

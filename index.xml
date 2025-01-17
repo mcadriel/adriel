@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Custom home page on Jane - A super concise theme for Hugo</title>
-    <link>https://mcadriel.github.io/adriel/</link>
-    <description>Recent content in Custom home page on Jane - A super concise theme for Hugo</description>
+    <title>Custom home page on Adriel&#39;s Page</title>
+    <link>http://localhost:1313/adriel/</link>
+    <description>Recent content in Custom home page on Adriel&#39;s Page</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>artiza.adriel@gmail.com (Adriel)</managingEditor>
     <webMaster>artiza.adriel@gmail.com (Adriel)</webMaster>
     <lastBuildDate>Fri, 17 Jan 2025 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://mcadriel.github.io/adriel/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/adriel/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Digital Signatures in Rust</title>
-      <link>https://mcadriel.github.io/adriel/post/digital-signatures-rust/</link>
+      <link>http://localhost:1313/adriel/post/digital-signatures-rust/</link>
       <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
       <author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>https://mcadriel.github.io/adriel/post/digital-signatures-rust/</guid>
+      <guid>http://localhost:1313/adriel/post/digital-signatures-rust/</guid>
       
         <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This tutorial demonstrates how to implement digital signatures in Rust using the &lt;code&gt;ring&lt;/code&gt; crate. Digital signatures are essential for ensuring data integrity and authenticity.&lt;/p&gt;
@@ -39,81 +39,16 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd digital_signature_demo&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;2-add-the-ring-crate&#34;&gt;2. Add the &lt;code&gt;ring&lt;/code&gt; Crate&lt;/h3&gt;
-&lt;p&gt;Update the &lt;code&gt;Cargo.toml&lt;/code&gt; file to include the &lt;code&gt;ring&lt;/code&gt; crate:&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;dependencies&lt;/span&gt;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ring&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.16.20&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;3-write-the-code&#34;&gt;3. Write the Code&lt;/h3&gt;
-&lt;p&gt;Replace the contents of &lt;code&gt;src/main.rs&lt;/code&gt; with the following code:&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; ring::{rand, signature};
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; ring::rand::SecureRandom;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Generate a key pair for signing
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; rng &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; rand::SystemRandom::new();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; private_key &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; signature::Ed25519KeyPair::generate_pkcs8(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;rng).expect(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Failed to generate key pair&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Create a key pair object from the private key
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; key_pair &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; signature::Ed25519KeyPair::from_pkcs8(private_key.as_ref()).expect(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Failed to parse key pair&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// The message to sign
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; message &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;b&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;This is a message to be signed.&amp;#34;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Sign the message
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; signature &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; key_pair.sign(message);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Message: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:?}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, String::from_utf8_lossy(message));
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Signature: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:x}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, signature);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Verify the signature
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; public_key_bytes &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; key_pair.public_key().as_ref();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; verification_result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; signature::UnparsedPublicKey::new(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;signature::&lt;span style=&#34;color:#66d9ef&#34;&gt;ED25519&lt;/span&gt;, public_key_bytes)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        .verify(message, signature.as_ref());
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;match&lt;/span&gt; verification_result {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Ok(()) &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Signature verification succeeded!&amp;#34;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Err(_) &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Signature verification failed!&amp;#34;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;4-run-the-project&#34;&gt;4. Run the Project&lt;/h3&gt;
-&lt;p&gt;Build and run the project:&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cargo run&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;h3 id=&#34;expected-output&#34;&gt;Expected Output&lt;/h3&gt;
-&lt;p&gt;The program will:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Generate a key pair.&lt;/li&gt;
-&lt;li&gt;Sign the message.&lt;/li&gt;
-&lt;li&gt;Verify the signature using the public key.&lt;/li&gt;
-&lt;li&gt;Print the results, including the signature and the verification status.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;You have successfully implemented digital signatures in Rust using the &lt;code&gt;ring&lt;/code&gt; crate. This basic example lays the foundation for integrating cryptographic signing into your applications.&lt;/p&gt;
-</description>
+&lt;p&gt;Update the &lt;code&gt;Cargo.toml&lt;/code&gt; file to include the &lt;code&gt;ring&lt;/code&gt; crate:&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Solana Smart Contract Tutorial</title>
-      <link>https://mcadriel.github.io/adriel/post/smartcontract-solana/</link>
+      <link>http://localhost:1313/adriel/post/smartcontract-solana/</link>
       <pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate>
       <author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>https://mcadriel.github.io/adriel/post/smartcontract-solana/</guid>
+      <guid>http://localhost:1313/adriel/post/smartcontract-solana/</guid>
       
         <description>&lt;h2 id=&#34;what-is-solana&#34;&gt;What is Solana?&lt;/h2&gt;
 &lt;p&gt;Solana is a high-performance blockchain supporting fast transactions and low fees. Smart contracts in Solana are written in &lt;strong&gt;Rust&lt;/strong&gt;, &lt;strong&gt;C&lt;/strong&gt;, or &lt;strong&gt;C++&lt;/strong&gt;, and are deployed as &lt;strong&gt;programs&lt;/strong&gt;. Programs interact with &lt;strong&gt;accounts&lt;/strong&gt;, which hold data and &lt;strong&gt;SOL&lt;/strong&gt; tokens.&lt;/p&gt;
@@ -145,153 +80,16 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;setting-up-a-new-solana-account&#34;&gt;Setting Up a New Solana Account&lt;/h2&gt;
 &lt;h3 id=&#34;step-1-create-a-new-keypair&#34;&gt;Step 1: Create a New Keypair&lt;/h3&gt;
-&lt;p&gt;A keypair consists of a &lt;strong&gt;public key&lt;/strong&gt; (your account address) and a &lt;strong&gt;private key&lt;/strong&gt; (used to sign transactions).&lt;/p&gt;
-&lt;p&gt;Run the following command to create a keypair:&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;solana-keygen new --outfile my-keypair.json&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;This generates a keypair file (my-keypair.json) that holds your private key.&lt;/p&gt;
-&lt;h3 id=&#34;step-2-fund-the-account&#34;&gt;Step 2: Fund the Account&lt;/h3&gt;
-&lt;p&gt;You can fund your account using Solana’s devnet faucet:&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;solana airdrop &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &amp;lt;your-public-key&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Replace &lt;!-- raw HTML omitted --&gt; with the public key from your keypair.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Writing a Simple Smart Contract&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 1: Setup&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Install Rust:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;curl --proto &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;=https&amp;#39;&lt;/span&gt; --tlsv1.2 -sSf https://sh.rustup.rs | sh&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;Install Solana tools:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cargo install --git https://github.com/solana-labs/solana-program-library&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Step 2: Add Dependencies&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Update your Cargo.toml file with the following dependencies:&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[dependencies]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;solana&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;program &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1.16.6&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;borsh &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.10.3&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Step 3: Write Your Program&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Replace the contents of src/lib.rs with the following:&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; solana_program::{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    account_info::{next_account_info, AccountInfo},
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    entrypoint,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    entrypoint::ProgramResult,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    pubkey::Pubkey,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    msg,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// The program&amp;#39;s entrypoint
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;entrypoint!(process_instruction);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// The function that runs when the program is invoked
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;process_instruction&lt;/span&gt;(
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    program_id: &lt;span style=&#34;color:#66d9ef&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;Pubkey&lt;/span&gt;,      &lt;span style=&#34;color:#75715e&#34;&gt;// Public key of the program
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    accounts: &lt;span style=&#34;color:#66d9ef&#34;&gt;&amp;amp;&lt;/span&gt;[AccountInfo], &lt;span style=&#34;color:#75715e&#34;&gt;// Accounts involved in the transaction
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    _instruction_data: &lt;span style=&#34;color:#66d9ef&#34;&gt;&amp;amp;&lt;/span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;u8&lt;/span&gt;], &lt;span style=&#34;color:#75715e&#34;&gt;// Additional input data
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;) -&amp;gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ProgramResult&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    msg!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, Solana!&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    Ok(())
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;This is a minimal smart contract that logs “Hello, Solana!” whenever invoked.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Step 4: Build the Program&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Build the program as a Solana-compatible binary:&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cargo build-bpf --release&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;This generates a .so file in the target/deploy/ directory. This file is your deployable smart contract.&lt;/p&gt;
-&lt;h3 id=&#34;deploying-the-smart-contract&#34;&gt;Deploying the Smart Contract&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Step 1: Deploy the Program&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Use the Solana CLI to deploy the .so file:&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;solana program deploy target/deploy/solana_hello_world.so&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;This command returns the Program ID of your smart contract.&lt;/p&gt;
-&lt;h3 id=&#34;interacting-with-the-contract&#34;&gt;Interacting with the Contract&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Step 1: Prepare a Transaction&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Write a script or use the CLI to invoke your program. For example:&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;solana program invoke --program-id &amp;lt;program-id&amp;gt; --signer ./my-keypair.json&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Step 2: Observe Logs&lt;/p&gt;
-&lt;p&gt;Check the Solana blockchain logs for your program’s output:&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;solana logs&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;You should see the message “Hello, Solana!”.&lt;/p&gt;
-&lt;h3 id=&#34;understanding-payer-and-signer-in-practice&#34;&gt;Understanding Payer and Signer in Practice&lt;/h3&gt;
-&lt;p&gt;When invoking a smart contract:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1.	The payer covers the transaction fee for execution.
-2.	The signer provides authorization to modify or interact with accounts.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;For example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;•	Signer: If your program writes to an account, that account must be a signer.
-•	Payer: The payer is the account specified when submitting the transaction.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Next Steps&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;1.	Explore Solana’s documentation for advanced features.
-2.	Learn how to work with Anchor Framework, a higher-level abstraction for Solana development.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;By following this guide, you’ve learned the basics of account creation, transaction signing, and deploying a simple Solana smart contract! 🎉&lt;/p&gt;
-</description>
+&lt;p&gt;A keypair consists of a &lt;strong&gt;public key&lt;/strong&gt; (your account address) and a &lt;strong&gt;private key&lt;/strong&gt; (used to sign transactions).&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>About</title>
-      <link>https://mcadriel.github.io/adriel/about/</link>
+      <link>http://localhost:1313/adriel/about/</link>
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       <author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>https://mcadriel.github.io/adriel/about/</guid>
+      <guid>http://localhost:1313/adriel/about/</guid>
       
         <description>&lt;h1 id=&#34;about-this-blog&#34;&gt;About This Blog&lt;/h1&gt;
 &lt;p&gt;Welcome to this space dedicated to exploring &lt;strong&gt;Rust programming&lt;/strong&gt; 🦀 and &lt;strong&gt;blockchain technologies&lt;/strong&gt;. Whether you&amp;rsquo;re a beginner, an experienced developer, or just curious about these topics, this blog offers resources to help you grow and learn.&lt;/p&gt;
@@ -300,38 +98,16 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;🚀 Rust Tutorials&lt;/strong&gt;&lt;br&gt;
-Beginner-friendly and intermediate guides to harness the power of Rust, the &amp;ldquo;language of fearless programming.&amp;rdquo;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;🔗 Blockchain Development&lt;/strong&gt;&lt;br&gt;
-Insights into building decentralized applications (dApps) and smart contracts with platforms like Solana and Go Ethereum (Geth).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;💡 Programming Projects&lt;/strong&gt;&lt;br&gt;
-A behind-the-scenes look at various projects, with code snippets and challenges faced during development.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;⚡ Performance Tips&lt;/strong&gt;&lt;br&gt;
-Techniques and advice to write efficient, clean, and scalable code.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;🌐 Web3 and Decentralization&lt;/strong&gt;&lt;br&gt;
-Explorations of blockchain protocols, decentralized finance (DeFi), and the rapidly evolving Web3 landscape.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;why-this-blog&#34;&gt;Why This Blog?&lt;/h2&gt;
-&lt;p&gt;The goal is to simplify complex topics, share practical knowledge, and inspire others to dive into the worlds of Rust and blockchain. This blog is for anyone passionate about coding, innovation, and the future of technology.&lt;/p&gt;
-&lt;p&gt;Start exploring today and join the journey toward fearless programming and decentralized possibilities! 🚀&lt;/p&gt;
-</description>
+Beginner-friendly and intermediate guides to harness the power of Rust, the &amp;ldquo;language of fearless programming.&amp;rdquo;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Mastering Closures in Rust: The Idiomatic Way</title>
-      <link>https://mcadriel.github.io/adriel/post/closures-in-rust/</link>
+      <link>http://localhost:1313/adriel/post/closures-in-rust/</link>
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate>
       <author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>https://mcadriel.github.io/adriel/post/closures-in-rust/</guid>
+      <guid>http://localhost:1313/adriel/post/closures-in-rust/</guid>
       
         <description>&lt;p&gt;Closures are a powerful feature in Rust, providing a concise way to capture and use variables from their surrounding scope. In this post, we’ll explore closures and how to use them in an idiomatic Rust programming style.&lt;/p&gt;
 &lt;h2 id=&#34;what-are-closures&#34;&gt;What Are Closures?&lt;/h2&gt;
@@ -341,60 +117,7 @@ Explorations of blockchain protocols, decentralized finance (DeFi), and the rapi
 &lt;li&gt;&lt;strong&gt;FnMut:&lt;/strong&gt; Borrow variables mutably.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;FnOnce:&lt;/strong&gt; Take ownership of the variables they capture.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Here’s a simple example:&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; greet &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;name: &lt;span style=&#34;color:#66d9ef&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;str&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;!&amp;#34;&lt;/span&gt;, name);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;greet(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;World&amp;#34;&lt;/span&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Capturing Variables by Reference&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; add_to_x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;n: &lt;span style=&#34;color:#66d9ef&#34;&gt;i32&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; x;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, add_to_x(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;)); &lt;span style=&#34;color:#75715e&#34;&gt;// Outputs: 15
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Capturing Variables Mutably&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; counter &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;mut&lt;/span&gt; increment &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    counter &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Counter: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, counter);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;};
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;increment(); &lt;span style=&#34;color:#75715e&#34;&gt;// Outputs: Counter: 1
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;increment(); &lt;span style=&#34;color:#75715e&#34;&gt;// Outputs: Counter: 2
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Capturing Variables by Value&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight-container&#34;&gt;
-
-  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
-
-  
-  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; vec![&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Alice&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Bob&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Charlie&amp;#34;&lt;/span&gt;];
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; consume_names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:?}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, names); &lt;span style=&#34;color:#75715e&#34;&gt;// Takes ownership
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;};
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// consume_names can only be called once
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;consume_names();&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-</description>
+&lt;p&gt;Here’s a simple example:&lt;/p&gt;</description>
       
     </item>
     
