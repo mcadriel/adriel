@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://localhost:1313/adriel/sitemap.xml
+Sitemap: https://mcadriel.github.io/adriel/sitemap.xml

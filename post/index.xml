@@ -2,33 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Adriel&#39;s Page</title>
-    <link>http://localhost:1313/adriel/post/</link>
+    <link>https://mcadriel.github.io/adriel/post/</link>
     <description>Recent content in Posts on Adriel&#39;s Page</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>artiza.adriel@gmail.com (Adriel)</managingEditor>
     <webMaster>artiza.adriel@gmail.com (Adriel)</webMaster>
     <lastBuildDate>Fri, 17 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/adriel/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mcadriel.github.io/adriel/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Digital Signatures in Rust</title>
-      <link>http://localhost:1313/adriel/post/digital-signatures-rust/</link>
+      <link>https://mcadriel.github.io/adriel/post/digital-signatures-rust/</link>
       <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>http://localhost:1313/adriel/post/digital-signatures-rust/</guid>
+      <guid>https://mcadriel.github.io/adriel/post/digital-signatures-rust/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This tutorial demonstrates how to implement digital signatures in Rust using the &lt;code&gt;ring&lt;/code&gt; crate. Digital signatures are essential for ensuring data integrity and authenticity.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Rust installed on your system. If not, install it from &lt;a href=&#34;https://www.rust-lang.org/&#34;&gt;Rust&amp;rsquo;s official website&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Basic knowledge of Rust programming.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;steps-to-implement-digital-signatures&#34;&gt;Steps to Implement Digital Signatures&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-create-a-new-rust-project&#34;&gt;1. Create a New Rust Project&lt;/h3&gt;&#xA;&lt;p&gt;Run the following command to create a new Rust project:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-container&#34;&gt;&#xA;&#xA;  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;&#xA;&#xA;  &#xA;  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cargo new digital_signature_demo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd digital_signature_demo&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;h3 id=&#34;2-add-the-ring-crate&#34;&gt;2. Add the &lt;code&gt;ring&lt;/code&gt; Crate&lt;/h3&gt;&#xA;&lt;p&gt;Update the &lt;code&gt;Cargo.toml&lt;/code&gt; file to include the &lt;code&gt;ring&lt;/code&gt; crate:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Solana Smart Contract Tutorial</title>
-      <link>http://localhost:1313/adriel/post/smartcontract-solana/</link>
+      <link>https://mcadriel.github.io/adriel/post/smartcontract-solana/</link>
       <pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>http://localhost:1313/adriel/post/smartcontract-solana/</guid>
+      <guid>https://mcadriel.github.io/adriel/post/smartcontract-solana/</guid>
       <description>&lt;h2 id=&#34;what-is-solana&#34;&gt;What is Solana?&lt;/h2&gt;&#xA;&lt;p&gt;Solana is a high-performance blockchain supporting fast transactions and low fees. Smart contracts in Solana are written in &lt;strong&gt;Rust&lt;/strong&gt;, &lt;strong&gt;C&lt;/strong&gt;, or &lt;strong&gt;C++&lt;/strong&gt;, and are deployed as &lt;strong&gt;programs&lt;/strong&gt;. Programs interact with &lt;strong&gt;accounts&lt;/strong&gt;, which hold data and &lt;strong&gt;SOL&lt;/strong&gt; tokens.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Familiarity with Rust programming.&lt;/li&gt;&#xA;&lt;li&gt;Basic understanding of blockchain and smart contracts.&lt;/li&gt;&#xA;&lt;li&gt;Installed &lt;a href=&#34;https://docs.solana.com/cli/install-solana-cli&#34;&gt;Solana CLI&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;key-concepts&#34;&gt;Key Concepts&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-accounts&#34;&gt;1. Accounts&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Accounts&lt;/strong&gt; are the data storage units on Solana. Every account:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Has a unique public key.&lt;/li&gt;&#xA;&lt;li&gt;Holds data that programs can read or modify.&lt;/li&gt;&#xA;&lt;li&gt;Is owned by a specific program.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Unlike Ethereum, Solana separates the program logic (smart contracts) from accounts.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;2-signers-and-payers&#34;&gt;2. Signers and Payers&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Signers&lt;/strong&gt;: The entities that cryptographically sign transactions to prove authorization.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Payers&lt;/strong&gt;: The accounts that pay the transaction fee. Often, the signer is also the payer, but they can be separate.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;setting-up-a-new-solana-account&#34;&gt;Setting Up a New Solana Account&lt;/h2&gt;&#xA;&lt;h3 id=&#34;step-1-create-a-new-keypair&#34;&gt;Step 1: Create a New Keypair&lt;/h3&gt;&#xA;&lt;p&gt;A keypair consists of a &lt;strong&gt;public key&lt;/strong&gt; (your account address) and a &lt;strong&gt;private key&lt;/strong&gt; (used to sign transactions).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mastering Closures in Rust: The Idiomatic Way</title>
-      <link>http://localhost:1313/adriel/post/closures-in-rust/</link>
+      <link>https://mcadriel.github.io/adriel/post/closures-in-rust/</link>
       <pubDate>Sat, 13 Jan 2024 00:00:00 +0000</pubDate><author>artiza.adriel@gmail.com (Adriel)</author>
-      <guid>http://localhost:1313/adriel/post/closures-in-rust/</guid>
+      <guid>https://mcadriel.github.io/adriel/post/closures-in-rust/</guid>
       <description>&lt;p&gt;Closures are a powerful feature in Rust, providing a concise way to capture and use variables from their surrounding scope. In this post, we’ll explore closures and how to use them in an idiomatic Rust programming style.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-are-closures&#34;&gt;What Are Closures?&lt;/h2&gt;&#xA;&lt;p&gt;A &lt;strong&gt;closure&lt;/strong&gt; is an anonymous function that can capture variables from its enclosing scope. Closures in Rust are flexible and can adapt to different levels of functionality:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fn:&lt;/strong&gt; Borrow variables from the environment immutably.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;FnMut:&lt;/strong&gt; Borrow variables mutably.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;FnOnce:&lt;/strong&gt; Take ownership of the variables they capture.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Here’s a simple example:&lt;/p&gt;</description>
     </item>
   </channel>

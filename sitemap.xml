@@ -1,73 +1,73 @@
-<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://mcadriel.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/adriel/categories/</loc>
+    <loc>https://mcadriel.github.io/adriel/categories/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/adriel/categories/cryptography/</loc>
+    <loc>https://mcadriel.github.io/adriel/categories/cryptography/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/adriel/</loc>
+    <loc>https://mcadriel.github.io/adriel/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/adriel/post/digital-signatures-rust/</loc>
+    <loc>https://mcadriel.github.io/adriel/post/digital-signatures-rust/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/adriel/tags/digital-signatures/</loc>
+    <loc>https://mcadriel.github.io/adriel/tags/digital-signatures/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/adriel/post/</loc>
+    <loc>https://mcadriel.github.io/adriel/post/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/adriel/tags/rust/</loc>
+    <loc>https://mcadriel.github.io/adriel/tags/rust/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/adriel/categories/rust/</loc>
+    <loc>https://mcadriel.github.io/adriel/categories/rust/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/adriel/tags/</loc>
+    <loc>https://mcadriel.github.io/adriel/tags/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/adriel/tags/tutorial/</loc>
+    <loc>https://mcadriel.github.io/adriel/tags/tutorial/</loc>
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/adriel/categories/programming/</loc>
+    <loc>https://mcadriel.github.io/adriel/categories/programming/</loc>
     <lastmod>2024-02-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/adriel/post/smartcontract-solana/</loc>
+    <loc>https://mcadriel.github.io/adriel/post/smartcontract-solana/</loc>
     <lastmod>2024-02-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/adriel/about/</loc>
+    <loc>https://mcadriel.github.io/adriel/about/</loc>
     <lastmod>2024-01-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/adriel/post/closures-in-rust/</loc>
+    <loc>https://mcadriel.github.io/adriel/post/closures-in-rust/</loc>
     <lastmod>2024-01-13T00:00:00+00:00</lastmod>
   </url>
   
