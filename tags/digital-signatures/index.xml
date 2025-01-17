@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rust on Jane - A super concise theme for Hugo</title>
-    <link>https://mcadriel.github.io/adriel/tags/rust/</link>
-    <description>Recent content in Rust on Jane - A super concise theme for Hugo</description>
+    <title>Digital-Signatures on Jane - A super concise theme for Hugo</title>
+    <link>https://mcadriel.github.io/adriel/tags/digital-signatures/</link>
+    <description>Recent content in Digital-Signatures on Jane - A super concise theme for Hugo</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>artiza.adriel@gmail.com (Adriel)</managingEditor>
     <webMaster>artiza.adriel@gmail.com (Adriel)</webMaster>
     <lastBuildDate>Fri, 17 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mcadriel.github.io/adriel/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mcadriel.github.io/adriel/tags/digital-signatures/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Digital Signatures in Rust</title>
       <link>https://mcadriel.github.io/adriel/post/digital-signatures-rust/</link>

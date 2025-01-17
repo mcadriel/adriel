@@ -8,10 +8,105 @@
     <language>en</language>
     <managingEditor>artiza.adriel@gmail.com (Adriel)</managingEditor>
     <webMaster>artiza.adriel@gmail.com (Adriel)</webMaster>
-    <lastBuildDate>Fri, 23 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jan 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mcadriel.github.io/adriel/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Digital Signatures in Rust</title>
+      <link>https://mcadriel.github.io/adriel/post/digital-signatures-rust/</link>
+      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
+      <author>artiza.adriel@gmail.com (Adriel)</author>
+      <guid>https://mcadriel.github.io/adriel/post/digital-signatures-rust/</guid>
+      
+        <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This tutorial demonstrates how to implement digital signatures in Rust using the &lt;code&gt;ring&lt;/code&gt; crate. Digital signatures are essential for ensuring data integrity and authenticity.&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Rust installed on your system. If not, install it from &lt;a href=&#34;https://www.rust-lang.org/&#34;&gt;Rust&amp;rsquo;s official website&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Basic knowledge of Rust programming.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;steps-to-implement-digital-signatures&#34;&gt;Steps to Implement Digital Signatures&lt;/h2&gt;
+&lt;h3 id=&#34;1-create-a-new-rust-project&#34;&gt;1. Create a New Rust Project&lt;/h3&gt;
+&lt;p&gt;Run the following command to create a new Rust project:&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cargo new digital_signature_demo
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd digital_signature_demo&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;2-add-the-ring-crate&#34;&gt;2. Add the &lt;code&gt;ring&lt;/code&gt; Crate&lt;/h3&gt;
+&lt;p&gt;Update the &lt;code&gt;Cargo.toml&lt;/code&gt; file to include the &lt;code&gt;ring&lt;/code&gt; crate:&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;dependencies&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ring&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0.16.20&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;3-write-the-code&#34;&gt;3. Write the Code&lt;/h3&gt;
+&lt;p&gt;Replace the contents of &lt;code&gt;src/main.rs&lt;/code&gt; with the following code:&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-rust&#34; data-lang=&#34;rust&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; ring::{rand, signature};
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;use&lt;/span&gt; ring::rand::SecureRandom;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Generate a key pair for signing
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; rng &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; rand::SystemRandom::new();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; private_key &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; signature::Ed25519KeyPair::generate_pkcs8(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;rng).expect(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Failed to generate key pair&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Create a key pair object from the private key
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; key_pair &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; signature::Ed25519KeyPair::from_pkcs8(private_key.as_ref()).expect(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Failed to parse key pair&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// The message to sign
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; message &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;b&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;This is a message to be signed.&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Sign the message
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; signature &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; key_pair.sign(message);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Message: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:?}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, String::from_utf8_lossy(message));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Signature: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{:x}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, signature);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// Verify the signature
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; public_key_bytes &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; key_pair.public_key().as_ref();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; verification_result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; signature::UnparsedPublicKey::new(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;signature::&lt;span style=&#34;color:#66d9ef&#34;&gt;ED25519&lt;/span&gt;, public_key_bytes)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        .verify(message, signature.as_ref());
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;match&lt;/span&gt; verification_result {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Ok(()) &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Signature verification succeeded!&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Err(_) &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; println!(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Signature verification failed!&amp;#34;&lt;/span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;4-run-the-project&#34;&gt;4. Run the Project&lt;/h3&gt;
+&lt;p&gt;Build and run the project:&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cargo run&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;expected-output&#34;&gt;Expected Output&lt;/h3&gt;
+&lt;p&gt;The program will:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Generate a key pair.&lt;/li&gt;
+&lt;li&gt;Sign the message.&lt;/li&gt;
+&lt;li&gt;Verify the signature using the public key.&lt;/li&gt;
+&lt;li&gt;Print the results, including the signature and the verification status.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You have successfully implemented digital signatures in Rust using the &lt;code&gt;ring&lt;/code&gt; crate. This basic example lays the foundation for integrating cryptographic signing into your applications.&lt;/p&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>Solana Smart Contract Tutorial</title>

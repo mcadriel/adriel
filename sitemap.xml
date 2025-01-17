@@ -3,17 +3,52 @@
   
   <url>
     <loc>https://mcadriel.github.io/adriel/categories/</loc>
-    <lastmod>2024-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcadriel.github.io/adriel/categories/cryptography/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mcadriel.github.io/adriel/</loc>
-    <lastmod>2024-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcadriel.github.io/adriel/post/digital-signatures-rust/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcadriel.github.io/adriel/tags/digital-signatures/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mcadriel.github.io/adriel/post/</loc>
-    <lastmod>2024-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcadriel.github.io/adriel/tags/rust/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcadriel.github.io/adriel/categories/rust/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcadriel.github.io/adriel/tags/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mcadriel.github.io/adriel/tags/tutorial/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -34,10 +69,6 @@
   <url>
     <loc>https://mcadriel.github.io/adriel/post/closures-in-rust/</loc>
     <lastmod>2024-01-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mcadriel.github.io/adriel/tags/</loc>
   </url>
   
 </urlset>
